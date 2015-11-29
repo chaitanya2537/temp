@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\KrishnaChaitanya\.gradle\caches\modules-2\files-2.1\com.joanzapata.android\android-iconify\1.0.11\e24e0626c4d3da7eff08b5b4024a7e3c794c22ba\android-iconify-1.0.11.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e24e0626c4d3da7eff08b5b4024a7e3c794c22ba">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\android-iconify-1.0.11-07dac2768f2258d8875a964d665a21dd558a096a.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\io.nlopez.smartlocation\library\3.0.8\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ea8f2319e095267960bc0ee938c7a9783fa0bd01">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-2b8b4954d9b8cabf84f5a941e4c1993e541a8127.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.github.gabrielemariotti.cards\cardslib-cards\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d851788f6c23d14aa5fa8fbfd6d1b17725ad44c5">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-9d23a295901fa4c40eac0e32568f80865ebdf810.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-55dc5919409be97a8e15acad8312a334e5d45b77.jar" />
+    </item>
+    <item
+        jar="C:\Users\KrishnaChaitanya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-5ef5f188acd88b78a37a2e2d5fd2fff4163ee8ac.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-b40b65093652f260ecda70001179842c98be1657.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-d6ef001c237b4b54e0fa71ee5518c90351c95e13.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\libs\bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-13bec59a18194728c9354b506878909ffebff211.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.orhanobut\logger\1.8\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="905a1a3170bf8e5f07e14217f5bdc2348f1425ca">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-96646b529c6132b1f8ca9cef81016084532b7500.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\se.emilsjolander\sprinkles\1.3.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b4a8880e81a27d1f7df02a20e5241cb00774a1ed">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-5cd0a887f4f940078d870278262e507cab53df9a.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\libs\twilio-java-sdk-4.0.2-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5f963db14aeb7c4625a4333be949af2d431ecaff">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\twilio-java-sdk-4.0.2-jar-with-dependencies-81ead9f910f8531779020fcc18273d09cad854f6.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\libs\Parse-1.8.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c2cb0bfe37cbefd855b6faa3c9a5be833aba7300">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\Parse-1.8.2-c650463bd52c9039b8dc1d1ed84b01725f2850b3.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\jars\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-5dc6d31c7cc6161c7bfb8148144cfaf70fe30b46.jar" />
+    </item>
+    <item
+        jar="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\exploded-aar\com.github.gabrielemariotti.cards\cardslib-core\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d6467247ced8a5d51f8ff73a6595d517eddba6">
+        <dex dex="C:\SoftwareEngineering\project\DementiaApp2\DementiaApp\app\build\intermediates\pre-dexed\debug\classes-53b043e82477ebbfc6d79b503473a257688031e0.jar" />
+    </item>
+
+</items>
