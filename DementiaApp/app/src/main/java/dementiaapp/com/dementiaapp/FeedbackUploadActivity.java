@@ -113,9 +113,10 @@ public class FeedbackUploadActivity extends Activity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                /*Intent intent = new Intent();
                 intent.setClass(FeedbackUploadActivity.this, StimulusUploadActivity.class);
-                startActivity(intent);
+                startActivity(intent);*/
+                finish();
             }
         });
 
@@ -129,8 +130,25 @@ public class FeedbackUploadActivity extends Activity {
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
         recorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
+
+        File file = new File(newStimulusFolderPath);
+
+        if (!((file).exists()) ) {
+
+            file.mkdirs();
+
+        }
+
+        File file1 = new File(newStimulusFolderPath, fileName + ".mp3");
+        try {
+            file1.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         recorder.setOutputFile(filePath);
         try {
+
             recorder.prepare();
         } catch (Exception e){
             e.printStackTrace();

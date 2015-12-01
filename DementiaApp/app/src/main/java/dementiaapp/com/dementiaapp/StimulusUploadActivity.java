@@ -248,6 +248,9 @@ public class StimulusUploadActivity extends Activity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*Intent intent = new Intent();
+                intent.setClass(StimulusUploadActivity.this, MenuActivityAdmin.class);
+                startActivity(intent);*/
                 finish();
             }
         });
@@ -258,6 +261,9 @@ public class StimulusUploadActivity extends Activity {
                 for(File file: new File(newStimulusFolderPath).listFiles())
                     file.delete();
                 new File(newStimulusFolderPath).delete();
+                /*Intent intent = new Intent();
+                intent.setClass(StimulusUploadActivity.this, MenuActivityAdmin.class);
+                startActivity(intent);*/
                 finish();
             }
         });

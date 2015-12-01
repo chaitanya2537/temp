@@ -52,7 +52,6 @@ public class GameActivity extends Activity {
 
     private List<newStimulus> stimulusList;
     private newStimulus currentStimulus;
-    private Score currentScoreObj;
 
     private int currentStimulusIndex;
 
@@ -76,26 +75,9 @@ public class GameActivity extends Activity {
 
         //stimuliMainDir = getExternalFilesDir(Environment.getDataDirectory().getAbsolutePath()).getAbsolutePath() + "/MemAid/stimuli/";
 
-        helpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //showBasicAlertDialog("How to play activity",
-                  //      "Click the microphone button and then name the object in the image shown.");
-                MemAidUtils.playAudio(currentStimulus.getHelpAudio());
-            }
-        });
 
-        if (Query.all(Score.class).get().size() != 0) {
-            currentScoreObj = Query.all(Score.class).get().get(0);
-            currentScore = currentScoreObj.score;
-        } else {
-            currentScore = 0;
-            currentScoreObj = new Score();
-            currentScoreObj.id = UUID.randomUUID().toString();
-            currentScoreObj.score = 0;
-            currentScoreObj.save();
-        }
-        updateScore();
+
+        currentScore = 0;
 
         //folder containing all stimulus subfolders
         stimuliMainDirPath = getExternalFilesDir(Environment.getDataDirectory().getAbsolutePath()).getAbsolutePath() + "/MemAid/stimuli/";
@@ -110,36 +92,40 @@ public class GameActivity extends Activity {
         stimulusList = new ArrayList<>();
 
         //create list of stimulus objects based on whether custom images or audio have been included
-        for (File stimulusFolder : allStimuli){
-            String fullPath = stimulusFolder.getAbsolutePath();
-            String stimulusName = fullPath.substring(fullPath.lastIndexOf("/stimuli/") + 8);
-            File[] stimulusParts = stimulusFolder.listFiles();
-            boolean containsIncorrectResponseAudio = false;
-            boolean containsCorrectResponseAudio = false;
-            boolean containsImage = false;
+        for (File stimulusFolder : allStimuli) {
+            if (stimulusFolder.isDirectory()) {
+                String fullPath = stimulusFolder.getAbsolutePath();
+                String stimulusName = fullPath.substring(fullPath.lastIndexOf("/stimuli/") + 8);
+                File[] stimulusParts = stimulusFolder.listFiles();
+                boolean containsIncorrectResponseAudio = false;
+                boolean containsCorrectResponseAudio = false;
+                boolean containsImage = false;
 
-            for (File part : stimulusParts){
-                if (part.getAbsolutePath().contains("photo")){
-                    containsImage = true;
-                    photoPath = part.getAbsolutePath();
+                for (File part : stimulusParts) {
+                    if (part.getAbsolutePath().contains("photo")) {
+                        containsImage = true;
+                        photoPath = part.getAbsolutePath();
+                    }
+                    if (part.getAbsolutePath().contains("incorrectFeedback")) {
+                        containsIncorrectResponseAudio = true;
+                    }
+                    if (part.getAbsolutePath().contains("correctFeedback")) {
+                        containsCorrectResponseAudio = true;
+                    }
                 }
-                if (part.getAbsolutePath().contains("incorrectFeedback")){
-                    containsIncorrectResponseAudio = true;
-                }
-                if (part.getAbsolutePath().contains("correctFeedback")){
-                    containsCorrectResponseAudio = true;
-                }
+
+                newStimulus stimulus = new newStimulus(fullPath, defaultsFolderPath, containsImage,
+                        containsIncorrectResponseAudio, containsCorrectResponseAudio);
+                stimulusList.add(stimulus);
+
+                resetStimulus();
+
+                //immediately being playing game on launch
+                displayCurrentStimulus();
             }
 
-            newStimulus stimulus = new newStimulus(fullPath, defaultsFolderPath, containsImage,
-                    containsIncorrectResponseAudio, containsCorrectResponseAudio);
-            stimulusList.add(stimulus);
+
         }
-
-        resetStimulus();
-
-        //immediately being playing game on launch
-        displayCurrentStimulus();
 
 }
 
@@ -258,8 +244,6 @@ public class GameActivity extends Activity {
 
 
     private void updateScore() {
-        currentScoreObj.score = currentScore;
-        currentScoreObj.save();
         score.setText(currentScore + "");
     }
 
@@ -331,6 +315,16 @@ public class GameActivity extends Activity {
             @Override
             public void onClick(View v) {
                 changeStimulus();
+            }
+        });
+
+        //help
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //showBasicAlertDialog("How to play activity",
+                //      "Click the microphone button and then name the object in the image shown.");
+                MemAidUtils.playAudio(currentStimulus.getHelpAudio());
             }
         });
 
