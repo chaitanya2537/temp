@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -299,7 +300,9 @@ public class GameActivity extends Activity {
 
             if (stimulusBitmap == null){
                 try {
-                    stimulusBitmap = BitmapFactory.decodeFile("file:///android_asset/questionMark.png");
+                    //stimulusBitmap = BitmapFactory.decodeFile("file:///android_asset/questionMark.png");
+                    InputStream bitmap=getAssets().open("questionMark.png");
+                    stimulusBitmap=BitmapFactory.decodeStream(bitmap);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
